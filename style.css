@@ -1,0 +1,455 @@
+/*general style*/
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    transition: 0.2s linear;
+    font-size: 1rem;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+.section-padding{
+    padding: 100px 0;
+    min-height: 100vh;
+}
+ 
+.section-header h2,
+.about-us-text h2{
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding-bottom: 36px;
+}
+
+h2 span{
+    color: #d5a264;
+    font-size: 2rem;
+}
+
+.btn{
+    background-color: #d5a264;
+    border: none;
+    color: black;
+}
+
+a.btn{
+    font-size: 1rem;
+    color: black;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+    background-color: #d39d5b;
+    color: black;
+}
+/*end of general style*/
+
+/*navigation section*/
+.navbar-nav a{
+    text-transform: uppercase;
+    font-weight: 500;
+    color: white;
+    margin: 0 3px;
+}
+
+.navbar-nav a:hover{
+    color: #d3ad7f;
+    font-weight: bold;
+    transform: translateY(-2px);
+}
+
+.navbar-brand img{
+    height: 2.25rem;
+    margin-right: 8px;
+}
+
+.navbar-brand{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px yellow;
+}
+
+.search-icon-lg{
+    display: none;
+}
+
+.search-icon-nav{
+    width: 20px;
+}
+
+.search-icon, .search-icon-dropdown{
+    background-color: black;
+    border: none;
+}
+.search-icon:hover,
+.search-icon-dropdown:hover{
+    transform: scale(1.1);
+    background-color: black;
+}
+
+.search-icon :active, 
+.search-icon-dropdown:active{
+    background-color: black;
+}
+
+.search-icon-modal:hover{
+    transform: scale(1);
+    background-color: #ce8f41;
+}
+/*end of navigation section*/
+
+
+/*home section*/
+.carousel-item{
+    min-height: 100vh;
+    height: 100%;
+}
+
+.carousel-item .w-100{
+    height: 100vh;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    z-index: 2;
+}
+
+.carousel-caption h5{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.carousel-caption p{
+    width: 60%;
+    margin: 30px auto;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.carousel-inner::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+/*end of home section*/
+
+/*products section*/
+.card{
+    border: 2px rgb(162, 99, 17) solid;
+    background-color: black;
+}
+
+.card-title{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: white;
+}
+
+.card-text{
+    text-align: justify;
+    text-justify: inter-word;
+    color: rgba(255, 255, 255, 0.792);
+}
+
+.card-footer{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.products .card img{
+    object-fit: cover;
+}
+/*end of products section*/
+
+/*about us section*/
+.about-us-wrapper{
+    display: flex;
+}
+.about-us-img img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-us-text{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.about-us-text h4{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.about-us-text span{
+    color: #d5a264;
+    font-family: 'Satisfy', cursive;
+    text-transform: lowercase;
+    font-size: 1.5rem;
+}
+.about-us-text p{
+    text-align: justify;
+    text-justify: inter-word;
+    color: rgba(255, 255, 255, 0.792);
+}
+
+.about-us-btn {
+    text-align: left;
+    margin-top: 40px;
+}
+/*end of about us section*/
+
+/*blogs section*/
+.blog .card {
+    box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.25);
+}
+
+.blog .card img{
+    padding: 20px;
+    object-fit: cover;
+}
+/*end of blogs section*/
+
+/*contact us section*/
+.contact .section-header p{
+    width: 70%;
+    margin: 0px auto 30px auto;
+    line-height: 1.7;
+}
+
+.contact .form-table{
+    padding: 20px;
+    color: black;
+}
+
+.form-label, .mb-3 p{
+    margin: 10px auto;
+}
+
+.form-button{
+    text-align: center;
+}
+/*end of contact us section*/
+
+/*responsive CSS*/
+@media only screen and (max-width: 300px){
+
+    .navbar-nav{
+        text-align: center;
+    }
+    
+    .navbar-nav a:hover{
+        transform: none;
+    }
+
+    .navbar-brand{
+        font-size: 0.8rem;
+        margin: 0;
+    }
+
+    .navbar-toggler{
+        font-size: 1rem;
+    }
+
+    .search-icon{
+        display: none;
+    }
+
+    .search-icon-lg{
+        display: block;
+    }
+
+    .section-header h2,
+    .about-us-text h2{
+        font-size: 1.25rem;
+        text-transform: uppercase;
+        padding-bottom: 36px;
+    }
+
+    h2 span{
+        font-size: 1.25rem;
+    }
+
+    .carousel-caption h5{
+        margin-top: 40px;
+        font-size: 1.25rem;
+    }
+
+    .carousel-caption p{
+        font-size: 1rem;
+    }
+
+    .card-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-group .card {
+        margin-bottom: 30px;
+        border: 2px rgb(162, 99, 17) solid !important;
+    }
+
+    .about-us-text h4{
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .about-us-btn {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    #blog .col-12{
+        margin-bottom: 30px;
+    }
+
+    #contact .section-header p{
+        text-align: justify;
+        text-justify: inter-word;
+        width: 85%;
+    }
+
+    #contact ::placeholder{
+        font-size: 0.8rem;
+    }
+    
+}
+
+@media only screen and (min-width: 300px) and (max-width: 767px){
+    .navbar-nav{
+        text-align: center;
+    }
+    
+    .navbar-nav a:hover{
+        transform: none;
+    }
+
+    .navbar-brand{
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .navbar-toggler{
+        font-size: 1rem;
+    }
+
+    .search-icon{
+        display: none;
+    }
+
+    .search-icon-lg{
+        display: block;
+    }
+
+    .section-header h2,
+    .about-us-text h2{
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        padding-bottom: 36px;
+    }
+
+    h2 span{
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption h5{
+        margin-top: 40px;
+        font-size: 1.5rem;
+    }
+
+    .card-group {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .card-group .card {
+        margin-bottom: 30px;
+        border: 2px rgb(162, 99, 17) solid !important;
+    }
+
+    .about-us-text h4{
+        text-align: center;
+    }
+
+    .about-us-btn {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    #blog .col-12{
+        margin-bottom: 30px;
+    }
+    
+    #contact .section-header p{
+        text-align: justify;
+        text-justify: inter-word;
+        width: 85%;
+    }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 991px){
+    .navbar-nav{
+        text-align: center;
+    }
+    
+    .navbar-nav a:hover{
+        transform: none;
+    }
+
+    .search-icon{
+        display: none;
+    }
+
+    .search-icon-lg{
+        display: block;
+    }
+
+    .card-group {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: auto;
+    }
+    
+    .card-group .card {
+        margin-bottom: 40px;
+        border: 2px rgb(162, 99, 17) solid !important;
+    }
+
+    #blog .col-12{
+        margin-bottom: 40px;
+    }
+
+    .about-us-text h4{
+        text-align: center;
+    }
+
+    .about-us-btn {
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+}
+
